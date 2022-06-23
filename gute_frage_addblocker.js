@@ -1,24 +1,29 @@
 // ==UserScript==
-// @name         Gute Frage Addblocker
+// @name         PopUp Werbeblocker
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  try to take over the world!
 // @author       You
 // @match        https://www.gutefrage.net/*
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=gutefrage.net
+// @match        https://www.aachener-nachrichten.de/*
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=https://www.totaladblock.com/
 // @grant        none
 // ==/UserScript==
 
 (function() {
   "use strict";
   let interval;
-  const id = "wl-container";
+  let possibleIds = ["wl-container"]
   interval = setInterval(() => {
-    const wlContainer = document.getElementById(id);
-    if (wlContainer !== null) {
-      console.log(`Tampermonkey: remove pop from container ${id}`);
-      wlContainer.remove();
-      clearInterval(interval);
-    }
+    possibleIds.forEach((id) => {
+        const wlContainer = document.getElementById(id);
+        if (wlContainer !== null) {
+            console.log(`Tampermonkey: remove popup from container ${id}`);
+            wlContainer.remove();
+            clearInterval(interval);
+        }
+    });
   }, 100);
+  //clear interval if no container found
+  setTimeout(() => {clearInterval(interval);}, 10000)
 })();
