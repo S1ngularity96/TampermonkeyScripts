@@ -5,3 +5,6 @@ Waits until video is loaded and creates a button to download the video
 
 == gute frage addblocker
 Removes the paywall for gutefrage.net
+
+== qis calculator
+Calculates the average from all subjects
