@@ -8,3 +8,6 @@ Removes the paywall for gutefrage.net
 
 == qis calculator
 Calculates the average from all subjects
+
+== YT Disable Cinematics Shadow
+Disables dynamic shadows (ambient light) around youtube videos

@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      1.0
 // @description  Calculates the average mark from all subjects
-// @author       Andrei Alexeev
+// @author       you
 // @match        https://www.qis.fh-aachen.de/qisserver/rds?state=notenspiegelStudent*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=fh-aachen.de
 // @grant        none
